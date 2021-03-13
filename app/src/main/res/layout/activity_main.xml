@@ -1,18 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@drawable/gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
+        android:id="@+id/searchKuesioner"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/text_box1"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/title_eksplorasi" />
+
+    <TextView
+        android:id="@+id/searchKuesionerText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center_vertical"
+        android:hint="Nama Kuesioner"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/searchKuesioner"
+        app:layout_constraintStart_toStartOf="@+id/searchKuesioner"
+        app:layout_constraintTop_toTopOf="@+id/searchKuesioner" />
+
+    <TextView
+        android:id="@+id/title_eksplorasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/lato_black"
+        android:text="Cari Kuesioner"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/text_box1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchKuesioner" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:fontFamily="@font/lato_black"
+        android:text="Trending"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:background="@drawable/text_box1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato_black"
+                android:text="Kuesioner Metode Kuesioner Favorit"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Umum"
+                android:textColor="#33539E"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="55dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Kepoin Kamyu"
+                android:textColor="#7FACD6"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="75dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="12 Maret 2021 - 215/500 Pengisi"
+                android:textColor="#979797"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="93dp"
+                android:fontFamily="@font/lato_black"
+                android:text="Rp250"
+                android:textColor="#979797"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
