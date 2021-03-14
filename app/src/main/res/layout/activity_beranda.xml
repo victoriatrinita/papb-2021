@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BerandaActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:background="@drawable/gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/info_box"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/text_box1"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/title_greetings" />
+
+    <View
+        android:id="@+id/vertical_line"
+        android:layout_width="1dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="204dp"
+        android:layout_marginRight="204dp"
+        android:background="#DEDEDE"
+        app:layout_constraintBottom_toBottomOf="@+id/info_box"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintLeft_toLeftOf="@+id/info_box"
+        app:layout_constraintRight_toRightOf="@+id/info_box"
+        app:layout_constraintTop_toTopOf="@+id/info_box"
+        app:layout_constraintVertical_bias="0.375" />
+
+    <ImageView
+        android:id="@+id/wallet_image"
+        android:contentDescription="wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/ic_wallet"
+        app:layout_constraintLeft_toLeftOf="@+id/info_box"
+        app:layout_constraintTop_toTopOf="@+id/info_box" />
+
+    <TextView
+        android:id="@+id/saldo_text"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center_vertical"
+        android:text="Rp 50.000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/wallet_image"
+        app:layout_constraintRight_toLeftOf="@+id/vertical_line"
+        app:layout_constraintTop_toTopOf="@+id/wallet_image" />
+
+    <ImageView
+        android:id="@+id/circle_checked_image"
+        android:contentDescription="circle checked"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/ic_circle_checked"
+        app:layout_constraintLeft_toRightOf="@+id/vertical_line"
+        app:layout_constraintTop_toTopOf="@+id/info_box" />
+
+    <TextView
+        android:id="@+id/jumlahKuesionerTerselesaikanText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center_vertical"
+        android:text="15"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/circle_checked_image"
+        app:layout_constraintRight_toLeftOf="@id/kuesionerTerselesaikanText"
+        app:layout_constraintTop_toTopOf="@+id/info_box"
+        />
+
+    <TextView
+        android:id="@+id/kuesionerTerselesaikanText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center_vertical"
+        android:text="kuesioner"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/jumlahKuesionerTerselesaikanText"
+        app:layout_constraintEnd_toEndOf="@id/info_box"
+        app:layout_constraintTop_toTopOf="@+id/info_box"
+        />
+
+    <TextView
+        android:id="@+id/title_greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Halo, Surveyman!"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:text="Isi lebih banyak kuesioner untuk menambah saldo!"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+       app:layout_constraintStart_toStartOf="@id/info_box"
+        app:layout_constraintTop_toBottomOf="@id/info_box"/>
+
+    <TextView
+        android:id="@+id/rekomendasi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Rekomendasi Kuesioner"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/tag_box"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/tag_box_active"
+        app:layout_constraintStart_toStartOf="@+id/rekomendasi_title"
+        app:layout_constraintTop_toBottomOf="@+id/rekomendasi_title" />
+
+    <TextView
+        android:id="@+id/tag_one"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="Semua"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tag_box"
+        app:layout_constraintEnd_toEndOf="@+id/tag_box"
+        app:layout_constraintTop_toTopOf="@+id/tag_box" />
+
+    <TextView
+        android:id="@+id/tag_box_two"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/tag_box"
+        app:layout_constraint_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tag_box"
+        app:layout_constraintTop_toBottomOf="@+id/rekomendasi_title" />
+
+    <TextView
+        android:id="@+id/tag_two"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="Olahraga"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tag_box_two"
+        app:layout_constraintEnd_toEndOf="@+id/tag_box_two"
+        app:layout_constraintTop_toTopOf="@+id/tag_box_two" />
+
+    <TextView
+        android:id="@+id/tag_box_three"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/tag_box"
+        app:layout_constraint_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tag_box_two"
+        app:layout_constraintTop_toBottomOf="@+id/rekomendasi_title" />
+
+    <TextView
+        android:id="@+id/tag_three"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="Pola Makan"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tag_box_three"
+        app:layout_constraintEnd_toEndOf="@+id/tag_box_three"
+        app:layout_constraintTop_toTopOf="@+id/tag_box_three" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tag_box" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="646dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:background="@drawable/text_box1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/lato_black"
+                android:text="Kuesioner Metode Kuesioner Favorit"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Umum"
+                android:textColor="#33539E"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="55dp"
+                android:fontFamily="@font/lato_bold"
+                android:text="Kepoin Kamyu"
+                android:textColor="#7FACD6"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="75dp"
+                android:fontFamily="@font/lato_regular"
+                android:text="12 Maret 2021 - 215/500 Pengisi"
+                android:textColor="#979797"
+                android:textSize="12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="93dp"
+                android:fontFamily="@font/lato_black"
+                android:text="Rp250"
+                android:textColor="#979797"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
