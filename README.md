@@ -5,7 +5,7 @@ Kelompok 4:
 2. Ignatius A. A. Saragih      18/429069/TK/47571
 3. Victoria Trinita Pardede    18/425325/TK/47020
 
-## Surveyku
+## KuesionerKu
 Platform yang mempertemukan orang yang sedang mencari responden kuesioner dengan orang-orang yang bersedia menjadi responden kuesioner.
 
 
