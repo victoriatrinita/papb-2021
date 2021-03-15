@@ -1,4 +1,4 @@
-package com.android.kuesionerku.ui.dashboard
+package com.android.kuesionerku.ui.eksplorasi
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,18 +10,18 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.android.kuesionerku.R
 
-class DashboardFragment : Fragment() {
+class EksplorasiFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var eksplorasiViewModel: EksplorasiViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-                ViewModelProvider(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
+        eksplorasiViewModel =
+                ViewModelProvider(this).get(EksplorasiViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_eksplorasi, container, false)
         /*val textView: TextView = root.findViewById(R.id.text_dashboard)
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
