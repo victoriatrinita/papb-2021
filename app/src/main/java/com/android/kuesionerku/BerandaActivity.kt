@@ -6,6 +6,6 @@ import android.os.Bundle
 class BerandaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_beranda)
+        setContentView(R.layout.fragment_beranda)
     }
 }

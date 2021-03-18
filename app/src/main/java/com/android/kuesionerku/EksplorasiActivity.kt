@@ -3,9 +3,9 @@ package com.android.kuesionerku
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
+class EksplorasiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_dashboard)
+        setContentView(R.layout.fragment_eksplorasi)
     }
 }

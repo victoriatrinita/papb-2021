@@ -3,23 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_beranda">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.android.kuesionerku.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_beranda"
+        android:name="com.android.kuesionerku.ui.beranda.BerandaFragment"
+        android:label="Beranda"
+        tools:layout="@layout/fragment_beranda" >
+        <action
+            android:id="@+id/action_navigation_beranda_to_navigation_eksplorasi"
+            app:destination="@id/navigation_eksplorasi" />
+        <action
+            android:id="@+id/action_navigation_beranda_to_navigation_profil"
+            app:destination="@id/navigation_profil" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.android.kuesionerku.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_eksplorasi"
+        android:name="com.android.kuesionerku.ui.eksplorasi.EksplorasiFragment"
+        android:label="Eksplorasi"
+        tools:layout="@layout/fragment_eksplorasi" >
+        <action
+            android:id="@+id/action_navigation_eksplorasi_to_navigation_beranda"
+            app:destination="@id/navigation_beranda" />
+        <action
+            android:id="@+id/action_navigation_eksplorasi_to_navigation_profil"
+            app:destination="@id/navigation_profil" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.android.kuesionerku.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_profil"
+        android:name="com.android.kuesionerku.ui.profil.ProfilFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profil" >
+        <action
+            android:id="@+id/action_navigation_profil_to_navigation_beranda"
+            app:destination="@id/navigation_beranda" />
+        <action
+            android:id="@+id/action_navigation_profil_to_navigation_eksplorasi"
+            app:destination="@id/navigation_eksplorasi" />
+    </fragment>
 </navigation>
