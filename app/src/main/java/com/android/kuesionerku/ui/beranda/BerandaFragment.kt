@@ -1,6 +1,9 @@
 package com.android.kuesionerku.ui.beranda
 
+import android.app.AlertDialog
 import android.content.Context
+import android.content.DialogInterface
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +12,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.kuesionerku.R
 import android.util.Log
+import android.widget.ImageView
+import androidx.annotation.RequiresApi
 
 
 class BerandaFragment : Fragment() {
@@ -53,11 +58,25 @@ class BerandaFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         Log.i("BerandaFragment", "onResume invoked")
+
+        val image = ImageView(context)
+        image.setImageResource(R.drawable.ic_promo)
+        val builderPromo: AlertDialog.Builder = AlertDialog.Builder(context)
+        builderPromo.setView(image)
+        builderPromo.setMessage("\uD83C\uDF8A PROMO SPESIAL \uD83C\uDF8A")
+        builderPromo.setCancelable(true)
+        builderPromo.setPositiveButton(
+                "OK",
+                DialogInterface.OnClickListener { dialog, _ -> dialog.cancel() })
+        val alertPromo: AlertDialog = builderPromo.create()
+        alertPromo.show()
     }
 
     override fun onPause() {
         super.onPause()
         Log.i("BerandaFragment", "onPause invoked")
+
+
     }
 
     override fun onStop() {
