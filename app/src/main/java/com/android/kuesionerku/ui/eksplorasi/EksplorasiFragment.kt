@@ -1,6 +1,8 @@
 package com.android.kuesionerku.ui.eksplorasi
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,4 +30,50 @@ class EksplorasiFragment : Fragment() {
         })*/
         return root
     }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        Log.i("EksplorasiFragment", "onAttach invoked")
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        Log.i("EksplorasiFragment", "onCreate invoked")
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Log.i("EksplorasiFragment", "onViewCreated invoked")
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("EksplorasiFragment", "onStart invoked")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("EksplorasiFragment", "onResume invoked")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("EksplorasiFragment", "onPause invoked")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("EksplorasiFragment", "onStop invoked")
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Log.i("EksplorasiFragment", "onDestroyView invoked")
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        Log.i("EksplorasiFragment", "onDetach invoked")
+    }
+
 }
