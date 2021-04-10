@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.beranda.BerandaFragment">
+    tools:context=".BerandaActivity">
 
     <View
         android:id="@+id/view"
@@ -254,7 +254,8 @@
                 android:text="Kuesioner Metode Kuesioner Favorit"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:id="@+id/tvberandakuesionerjudul"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -266,7 +267,8 @@
                 android:text="Umum"
                 android:textColor="#33539E"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:id="@+id/tvberandakuesionerakses" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -278,7 +280,8 @@
                 android:text="Kepoin Kamyu"
                 android:textColor="#7FACD6"
                 android:textSize="14sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:id="@+id/tvberandakuesionerkategori"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -289,7 +292,8 @@
                 android:fontFamily="@font/lato_regular"
                 android:text="12 Maret 2021 - 215/500 Pengisi"
                 android:textColor="#979797"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:id="@+id/tvberandakuesionertanggal"/>
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
@@ -301,7 +305,8 @@
                 android:text="Rp250"
                 android:textColor="#979797"
                 android:textSize="12sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:id="@+id/tvberandakuesionersaldo" />
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
