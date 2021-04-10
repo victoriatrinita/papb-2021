@@ -20,8 +20,8 @@
         android:id="@+id/searchKuesioner"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="28dp"
+        android:layout_marginTop="24dp"
         android:layout_marginRight="28dp"
         android:background="@drawable/text_box1"
         app:layout_constraintEnd_toEndOf="@+id/view"
@@ -51,12 +51,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="48dp"
-        android:fontFamily="@font/lato_black"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/lato_bold"
         android:text="Cari Kuesioner"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -65,11 +64,11 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginRight="28dp"
+
         android:background="@drawable/text_box1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.321"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchKuesioner" />
 
@@ -77,13 +76,13 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:fontFamily="@font/lato_black"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/lato_bold"
+        android:paddingBottom="15dp"
         android:text="Trending"
         android:textSize="20sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
@@ -91,7 +90,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" >
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -166,12 +165,16 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:layout_alignEnd="@+id/card"
                 android:layout_alignRight="@+id/card"
                 android:layout_alignBottom="@+id/card"
                 android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="0dp"
                 app:srcCompat="@drawable/arrowright" />
 
         </RelativeLayout>
