@@ -18,10 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProfilActivity">
-
-        </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".EksplorasiActivity" />
+        <activity android:name=".ProfilActivity" />
+        <activity android:name=".BerandaActivity" />
     </application>
 
 </manifest>
