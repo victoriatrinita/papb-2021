@@ -9,7 +9,7 @@
         android:id="@+id/navigation_beranda"
         android:name="com.android.kuesionerku.ui.beranda.BerandaFragment"
         android:label="Beranda"
-        tools:layout="@layout/fragment_beranda" >
+        tools:layout="@layout/fragment_beranda">
         <action
             android:id="@+id/action_navigation_beranda_to_navigation_eksplorasi"
             app:destination="@id/navigation_eksplorasi" />
