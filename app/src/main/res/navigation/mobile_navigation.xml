@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_navigation_beranda_to_navigation_profil"
             app:destination="@id/navigation_profil" />
+        <action
+            android:id="@+id/action_navigation_beranda_to_navigation_buat_kuesioner"
+            app:destination="@id/navigation_buat_kuesioner" />
     </fragment>
 
     <fragment
@@ -29,6 +32,9 @@
         <action
             android:id="@+id/action_navigation_eksplorasi_to_navigation_profil"
             app:destination="@id/navigation_profil" />
+        <action
+            android:id="@+id/action_navigation_eksplorasi_to_navigation_buat_kuesioner"
+            app:destination="@id/navigation_buat_kuesioner" />
     </fragment>
 
     <fragment
@@ -42,5 +48,25 @@
         <action
             android:id="@+id/action_navigation_profil_to_navigation_eksplorasi"
             app:destination="@id/navigation_eksplorasi" />
+        <action
+            android:id="@+id/action_navigation_profil_to_navigation_buat_kuesioner"
+            app:destination="@id/navigation_buat_kuesioner" />
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_buat_kuesioner"
+        android:name="com.android.kuesionerku.BuatKuesionerFragment"
+        android:label="BuatKuesioner"
+        tools:layout="@layout/fragment_buat_kuesioner" >
+        <action
+            android:id="@+id/action_navigation_eksplorasi_to_navigation_beranda"
+            app:destination="@id/navigation_beranda" />
+        <action
+            android:id="@+id/action_navigation_eksplorasi_to_navigation_profil"
+            app:destination="@id/navigation_profil" />
+        <action
+            android:id="@+id/action_navigation_buat_kuesioner_to_navigation_profil"
+            app:destination="@id/navigation_profil" />
+    </fragment>
+
 </navigation>
