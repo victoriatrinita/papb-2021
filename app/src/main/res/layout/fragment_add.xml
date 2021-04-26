@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.add.AddFragment"
-    android:padding="24dp">
+    android:padding="24dp"
+    tools:context=".fragments.add.AddFragment">
 
     <EditText
-        android:id="@+id/addFirstName_et"
+        android:id="@+id/addJudul_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="Judul"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,45 +21,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
-        android:id="@+id/addAge_et"
+        android:id="@+id/addAkses_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Age"
+        android:hint="Akses"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addLastName_et" />
-
-
+        app:layout_constraintTop_toBottomOf="@id/addJudul_et" />
 
     <EditText
-        android:id="@+id/addLastName_et"
+        android:id="@+id/addKategori_et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Last Name"
+        android:hint="Kategori"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addFirstName_et" />
+        app:layout_constraintTop_toBottomOf="@+id/addAkses_et"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <EditText
+        android:id="@+id/addTanggal_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Tanggal"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/addKategori_et"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <EditText
+        android:id="@+id/addReward_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Reward"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/addTanggal_et"
+        tools:layout_editor_absoluteX="24dp" />
 
     <Button
         android:id="@+id/add_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="48dp"
         android:text="Add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addAge_et" />
+        app:layout_constraintTop_toBottomOf="@+id/addReward_et"
+        tools:layout_editor_absoluteX="24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

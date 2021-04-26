@@ -26,10 +26,11 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = userList[position]
-        holder.itemView.id_txt.text = currentItem.id.toString()
-        holder.itemView.firstName_txt.text = currentItem.firstName
-        holder.itemView.lastName_txt.text = currentItem.lastName
-        holder.itemView.age_txt.text = currentItem.age.toString()
+        holder.itemView.tvberandakuesionerjudul.text = currentItem.judul
+        holder.itemView.tvberandakuesionerakses.text = currentItem.akses
+        holder.itemView.tvberandakuesionerkategori.text = currentItem.kategori
+        holder.itemView.tvberandakuesionertanggal.text = currentItem.tanggal
+        holder.itemView.tvberandakuesionersaldo.text = currentItem.reward
     }
 
     fun setData(user: List<User>){

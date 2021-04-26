@@ -37,13 +37,15 @@ class AddFragment : Fragment() {
     }
 
     private fun insertDataToDatabase(){
-        val firstName = addFirstName_et.text.toString()
-        val lastName = addLastName_et.text.toString()
-        val age = addAge_et.text
+        val judul = addJudul_et.text.toString()
+        val akses = addAkses_et.text.toString()
+        val kategori = addKategori_et.text.toString()
+        val tanggal = addTanggal_et.text.toString()
+        val reward = addReward_et.text.toString()
 
-        if(inputCheck(firstName, lastName, age)){
+        if(inputCheck(judul, akses, kategori, tanggal, reward)){
             // Create User Object
-            val user = User(0, firstName, lastName, Integer.parseInt(age.toString()))
+            val user = User(0, judul, akses, kategori, tanggal, reward)
             // Add Data to Database
             mUserViewModel.addUser(user)
             Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
@@ -54,7 +56,8 @@ class AddFragment : Fragment() {
         }
     }
 
-    private fun inputCheck(firstName: String, lastName: String, age: Editable): Boolean {
-        return !(TextUtils.isEmpty(firstName) && TextUtils.isEmpty(lastName) && age.isEmpty())
+    private fun inputCheck(judul: String, akses: String, kategori: String, tanggal: String, reward: String): Boolean {
+        return !(TextUtils.isEmpty(judul) && TextUtils.isEmpty(akses) && TextUtils.isEmpty(kategori)
+                && TextUtils.isEmpty(tanggal) && TextUtils.isEmpty(reward))
     }
 }
