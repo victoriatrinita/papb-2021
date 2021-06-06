@@ -16,7 +16,7 @@ import com.android.kuesionerku.data.UserViewModel
 import com.android.kuesionerku.fragments.list.ListAdapter
 import kotlinx.android.synthetic.main.fragment_eksplorasi.view.*
 
-class EksplorasiFragment : Fragment() {
+class EksplorasiFragment : Fragment(), ListAdapter.OnItemClickListener {
 
     private lateinit var eksplorasiViewModel: UserViewModel
 
@@ -32,7 +32,7 @@ class EksplorasiFragment : Fragment() {
             textView.text = it
         })*/
 
-        val adapter = ListAdapter()
+        val adapter = ListAdapter(this)
         val recyclerview = root.rveksplorasi
         recyclerview.adapter = adapter
         recyclerview.layoutManager = LinearLayoutManager(requireContext())
@@ -44,6 +44,10 @@ class EksplorasiFragment : Fragment() {
         })
 
         return root
+    }
+
+    override fun onItemClick(position: Int, judul: CharSequence) {
+        TODO("Not yet implemented")
     }
 
     override fun onAttach(context: Context) {
