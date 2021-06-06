@@ -31,6 +31,7 @@
         <activity android:name=".EksplorasiActivity" />
         <activity android:name=".ProfilActivity" />
         <activity android:name=".BerandaActivity" />
+
     </application>
 
 </manifest>

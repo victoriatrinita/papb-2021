@@ -10,24 +10,39 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.kuesionerku.R
+import com.android.kuesionerku.data.UserViewModel
+import com.android.kuesionerku.fragments.list.ListAdapter
+import kotlinx.android.synthetic.main.fragment_eksplorasi.view.*
 
 class EksplorasiFragment : Fragment() {
 
-    private lateinit var eksplorasiViewModel: EksplorasiViewModel
+    private lateinit var eksplorasiViewModel: UserViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        eksplorasiViewModel =
-                ViewModelProvider(this).get(EksplorasiViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_eksplorasi, container, false)
         /*val textView: TextView = root.findViewById(R.id.text_dashboard)
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })*/
+
+        val adapter = ListAdapter()
+        val recyclerview = root.rveksplorasi
+        recyclerview.adapter = adapter
+        recyclerview.layoutManager = LinearLayoutManager(requireContext())
+
+        eksplorasiViewModel =
+            ViewModelProvider(this).get(UserViewModel::class.java)
+        eksplorasiViewModel.readAllData.observe(viewLifecycleOwner, Observer { user ->
+            adapter.setData(user)
+        })
+
         return root
     }
 

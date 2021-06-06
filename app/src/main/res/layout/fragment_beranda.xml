@@ -236,96 +236,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tag_box">
 
-        <RelativeLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvberanda"
+            android:layout_marginTop="12dp"
             android:layout_width="match_parent"
-            android:layout_height="646dp">
+            android:layout_height="match_parent" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/card"
-                android:layout_width="match_parent"
-                android:layout_height="115dp"
-                android:layout_marginLeft="28dp"
-                android:layout_marginRight="28dp"
-                android:background="@drawable/text_box1" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:layout_marginLeft="38dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/lato_black"
-                android:text="Kuesioner Metode Kuesioner Favorit"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:id="@+id/tvberandakuesionerjudul"/>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:layout_marginLeft="38dp"
-                android:layout_marginTop="35dp"
-                android:fontFamily="@font/lato_bold"
-                android:text="Umum"
-                android:textColor="#33539E"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:id="@+id/tvberandakuesionerakses" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:layout_marginLeft="38dp"
-                android:layout_marginTop="55dp"
-                android:fontFamily="@font/lato_bold"
-                android:text="Kepoin Kamyu"
-                android:textColor="#7FACD6"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:id="@+id/tvberandakuesionerkategori"/>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:layout_marginLeft="38dp"
-                android:layout_marginTop="75dp"
-                android:fontFamily="@font/lato_regular"
-                android:text="12 Maret 2021 - 215/500 Pengisi"
-                android:textColor="#979797"
-                android:textSize="12sp"
-                android:id="@+id/tvberandakuesionertanggal"/>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="38dp"
-                android:layout_marginLeft="38dp"
-                android:layout_marginTop="93dp"
-                android:fontFamily="@font/lato_black"
-                android:text="Rp250"
-                android:textColor="#979797"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:id="@+id/tvberandakuesionersaldo" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignEnd="@+id/card"
-                android:layout_alignRight="@+id/card"
-                android:layout_alignBottom="@+id/card"
-                android:layout_alignParentTop="true"
-                android:layout_marginEnd="13dp"
-                android:layout_marginRight="13dp"
-                android:layout_marginBottom="0dp"
-                app:srcCompat="@drawable/arrowright" />
-
-        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
