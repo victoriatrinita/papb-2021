@@ -12,6 +12,11 @@
         android:title="Eksplorasi" />
 
     <item
+        android:id="@+id/navigation_buat_kuesioner"
+        android:icon="@drawable/ic_create"
+        android:title="Buat" />
+
+    <item
         android:id="@+id/navigation_profil"
         android:icon="@drawable/nav_profil_gray"
         android:title="Profil" />

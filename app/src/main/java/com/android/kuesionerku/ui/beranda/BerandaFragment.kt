@@ -14,20 +14,38 @@ import com.android.kuesionerku.R
 import android.util.Log
 import android.widget.ImageView
 import androidx.annotation.RequiresApi
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.android.kuesionerku.data.UserViewModel
+import com.android.kuesionerku.fragments.list.ListAdapter
+import kotlinx.android.synthetic.main.fragment_beranda.view.*
 
 
 class BerandaFragment : Fragment() {
 
-    private lateinit var berandaViewModel: BerandaViewModel
+    private lateinit var berandaViewModel: UserViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        berandaViewModel =
-                ViewModelProvider(this).get(BerandaViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_beranda, container, false)
+
+        //recyclerview
+        val adapter = ListAdapter()
+        val recyclerview = root.rvberanda
+        recyclerview.adapter = adapter
+        recyclerview.layoutManager = LinearLayoutManager(requireContext())
+
+        berandaViewModel =
+            ViewModelProvider(this).get(UserViewModel::class.java)
+        berandaViewModel.readAllData.observe(viewLifecycleOwner, Observer { user ->
+            adapter.setData(user)
+        })
+
+
         /*val textView: TextView = root.findViewById(R.id.text_home)
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
