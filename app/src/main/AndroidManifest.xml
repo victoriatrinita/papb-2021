@@ -13,16 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KuesionerKu"
         android:usesCleartextTraffic="true">
-        <activity android:name=".BuatKuesionerActivity"></activity>
-        <activity
-            android:name=".NavActivity"
-            android:label="@string/title_activity_nav" />
-        <activity android:name=".LoginActivity">
+
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".NavActivity"
+            android:label="@string/title_activity_nav" />
+        <activity android:name=".LoginActivity">
+
         </activity>
         <activity android:name=".EksplorasiActivity" />
         <activity android:name=".ProfilActivity" />
