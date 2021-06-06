@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -47,7 +48,7 @@ class EksplorasiFragment : Fragment(), ListAdapter.OnItemClickListener {
     }
 
     override fun onItemClick(position: Int, judul: CharSequence) {
-        TODO("Not yet implemented")
+        Toast.makeText(requireActivity(), "Item $judul clicked", Toast.LENGTH_SHORT).show()
     }
 
     override fun onAttach(context: Context) {
