@@ -1,7 +1,6 @@
-package com.android.kuesionerku.fragments.add
+package com.android.kuesionerku.ui.add
 
 import android.os.Bundle
-import android.text.Editable
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater

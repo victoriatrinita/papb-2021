@@ -6,15 +6,18 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+<<<<<<< HEAD
 import android.widget.TextView
 import android.widget.Toast
+=======
+>>>>>>> 256567d2eb4ec752830812db01136277372d9905
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.kuesionerku.R
 import com.android.kuesionerku.data.UserViewModel
-import com.android.kuesionerku.fragments.list.ListAdapter
+import com.android.kuesionerku.ui.list.ListAdapter
 import kotlinx.android.synthetic.main.fragment_eksplorasi.view.*
 
 class EksplorasiFragment : Fragment(), ListAdapter.OnItemClickListener {
