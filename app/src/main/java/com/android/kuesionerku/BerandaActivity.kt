@@ -1,17 +1,48 @@
 package com.android.kuesionerku
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.android.kuesionerku.model.Kuesioner
+import com.google.firebase.messaging.FirebaseMessagingService
+import kotlinx.android.synthetic.main.fragment_beranda.*
+
 
 class BerandaActivity : AppCompatActivity(), IKuesionerView {
+
+    var title = ""
+    var message = ""
+
+
+    class PushNotificationManager : FirebaseMessagingService() {
+        var MT: String? = null
+        override fun onNewToken(token: String) {
+            super.onNewToken(token)
+            MT = token
+            println("Refreshed token: $token")
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_beranda)
 
         KuesionerPresenter(this).getDataFromApi()
+
+        if (intent.extras != null) {
+            for (key in intent.extras!!.keySet()) {
+                if (key == "title") {
+                    title = intent.extras!!.getString("title", "")
+                }
+                if (key == "message") {
+                    message = intent.extras!!.getString("message", "")
+                }
+            }
+        }
+        tag_one.text = title
+        tag_two.text = message
     }
 
     override fun onDataCompleteFromApi(kuesioner: Kuesioner) {
