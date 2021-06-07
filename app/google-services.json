@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "368183489036",
+    "project_id": "kuesionerku-27576",
+    "storage_bucket": "kuesionerku-27576.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:368183489036:android:46af7acd666ec22ba47429",
+        "android_client_info": {
+          "package_name": "com.android.kuesionerku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "368183489036-0ei8h5kbcfcp1qvm28ucn51qss1bvi06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZqA8Gl4UwqxIX84B_pEBusiWky6Jgf0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "368183489036-0ei8h5kbcfcp1qvm28ucn51qss1bvi06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

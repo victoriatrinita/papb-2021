@@ -1,4 +1,4 @@
-package com.android.kuesionerku.fragments.list
+package com.android.kuesionerku.ui.list
 
 import android.view.LayoutInflater
 import android.view.View

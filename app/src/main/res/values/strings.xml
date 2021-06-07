@@ -4,7 +4,12 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="menu_keluar">Keluar</string>
     <string name="iv_logo">KuesionerKu Logo</string>
+    <string name="iv_telephone">Telephone Icon</string>
+    <string name="iv_email">Email Icon</string>
+    <string name="iv_profpic">Profile Picture</string>
+    <string name="iv_keluar">Keluar</string>
   
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

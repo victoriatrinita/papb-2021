@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.eksplorasi.EksplorasiFragment">
-
+    <!--Background segmen atas-->
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
@@ -15,7 +15,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <!--Search bar-->
     <TextView
         android:id="@+id/searchKuesioner"
         android:layout_width="0dp"
@@ -44,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="@+id/searchKuesioner"
         app:layout_constraintStart_toStartOf="@+id/searchKuesioner"
         app:layout_constraintTop_toTopOf="@+id/searchKuesioner" />
-
+    <!--Title-->
     <TextView
         android:id="@+id/title_eksplorasi"
         android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    <!--Kategori-->
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="0dp"
@@ -71,7 +71,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchKuesioner" />
-
+    <!--Trending-->
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
-
+    <!--Card View Trending-->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -98,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </androidx.cardview.widget.CardView>
-
+    <!--Search Button-->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="24dp"
@@ -108,7 +108,7 @@
         app:layout_constraintStart_toStartOf="@+id/searchKuesioner"
         app:layout_constraintTop_toTopOf="@+id/searchKuesioner"
         app:srcCompat="@drawable/search" />
-
+    <!--Dropdown-->
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="24dp"
