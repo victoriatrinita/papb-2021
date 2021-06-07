@@ -33,7 +33,7 @@ class ListFragment : Fragment(), ListAdapter.OnItemClickListener {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        // UserViewModel
+        // UserViewModels
 
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         mUserViewModel.readAllData.observe(viewLifecycleOwner, Observer { user ->
