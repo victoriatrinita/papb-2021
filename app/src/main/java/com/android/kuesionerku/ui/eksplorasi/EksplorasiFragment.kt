@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -16,7 +17,7 @@ import com.android.kuesionerku.data.UserViewModel
 import com.android.kuesionerku.fragments.list.ListAdapter
 import kotlinx.android.synthetic.main.fragment_eksplorasi.view.*
 
-class EksplorasiFragment : Fragment() {
+class EksplorasiFragment : Fragment(), ListAdapter.OnItemClickListener {
 
     private lateinit var eksplorasiViewModel: UserViewModel
 
@@ -32,7 +33,7 @@ class EksplorasiFragment : Fragment() {
             textView.text = it
         })*/
 
-        val adapter = ListAdapter()
+        val adapter = ListAdapter(this)
         val recyclerview = root.rveksplorasi
         recyclerview.adapter = adapter
         recyclerview.layoutManager = LinearLayoutManager(requireContext())
@@ -44,6 +45,10 @@ class EksplorasiFragment : Fragment() {
         })
 
         return root
+    }
+
+    override fun onItemClick(position: Int, judul: CharSequence) {
+        Toast.makeText(requireActivity(), "Item $judul clicked", Toast.LENGTH_SHORT).show()
     }
 
     override fun onAttach(context: Context) {
