@@ -3,7 +3,6 @@ package com.android.kuesionerku.ui.beranda
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
-import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,11 +12,10 @@ import androidx.lifecycle.ViewModelProvider
 import com.android.kuesionerku.R
 import android.util.Log
 import android.widget.ImageView
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.kuesionerku.data.UserViewModel
-import com.android.kuesionerku.fragments.list.ListAdapter
+import com.android.kuesionerku.ui.list.ListAdapter
 import kotlinx.android.synthetic.main.fragment_beranda.view.*
 
 

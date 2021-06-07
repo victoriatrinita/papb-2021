@@ -6,14 +6,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.kuesionerku.R
 import com.android.kuesionerku.data.UserViewModel
-import com.android.kuesionerku.fragments.list.ListAdapter
+import com.android.kuesionerku.ui.list.ListAdapter
 import kotlinx.android.synthetic.main.fragment_eksplorasi.view.*
 
 class EksplorasiFragment : Fragment() {
