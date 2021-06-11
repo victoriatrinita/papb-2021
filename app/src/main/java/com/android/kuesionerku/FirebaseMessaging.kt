@@ -19,27 +19,23 @@ class FirebaseMessaging : FirebaseMessagingService() {
     lateinit var manager: NotificationManager
     var CHANNEL_ID = "CHANNEL"
 
+
+    // Parsing Notifikasi yang diterima dari admin FCM
     override fun onMessageReceived(remotemessage: RemoteMessage) {
         super.onMessageReceived(remotemessage)
         title = remotemessage.notification!!.title!!
         message = remotemessage.notification!!.body!!
 
-/* if you have any custom data from backend
- data=remotemessage.data.get("yourkeyvalue")*/
-
-//        if (message == null) {
-//            message = Objects.requireNonNull(remotemessage.notification!!.body)!!
-//
-//        }
         manager = this.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         sendNotification()
     }
 
+    // Print out token jika diperbarui
     override fun onNewToken(token: String) {
-//        super.onNewToken(p0)
         Log.d("TAG", "the token refreshed: $token")
     }
 
+    // Print out token jika diperbarui
     private fun sendNotification() {
         var intent = Intent(applicationContext, BerandaActivity::class.java)
 
@@ -48,6 +44,9 @@ class FirebaseMessaging : FirebaseMessagingService() {
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
 
+        // Membuat channel notifikasi
+        // Channel notifikasi diwajibkan Sejak API level 26
+        // agar notifikasinya muncul karena alasan keamanan dan keleluasaan fitur
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             var channel = NotificationChannel(
                 CHANNEL_ID,
@@ -57,6 +56,7 @@ class FirebaseMessaging : FirebaseMessagingService() {
             manager.createNotificationChannel(channel)
         }
 
+        // Membuat builder notifikasi
         var builder = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle(title)
             .setSmallIcon(R.drawable.ic_logo)

@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_add.view.*
 
 class AddFragment : Fragment() {
 
-    private lateinit var mUserViewModel : UserViewModel
+    private lateinit var mUserViewModel: UserViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,34 +28,47 @@ class AddFragment : Fragment() {
 
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
-      view.add_btn.setOnClickListener {
+        view.add_btn.setOnClickListener {
             insertDataToDatabase()
         }
 
         return view
     }
 
-    private fun insertDataToDatabase(){
+    // Memasukkan data ke room DB
+    private fun insertDataToDatabase() {
         val judul = addJudul_et.text.toString()
         val akses = addAkses_et.text.toString()
         val kategori = addKategori_et.text.toString()
         val tanggal = addTanggal_et.text.toString()
         val reward = addReward_et.text.toString()
 
-        if(inputCheck(judul, akses, kategori, tanggal, reward)){
-            // Create User Object
+        if (inputCheck(judul, akses, kategori, tanggal, reward)) {
+
+            // Membuat objek User
             val user = User(0, judul, akses, kategori, tanggal, reward)
-            // Add Data to Database
+            // Menambahkan data ke basis data
             mUserViewModel.addUser(user)
+            // Memunculkan Toast "Successfully added"
             Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
-            // Navigate Back
+            // Menavigasi kembali ke fragment List (halaman buat)
             findNavController().navigate(R.id.action_addFragment_to_listFragment)
         } else {
-            Toast.makeText(requireContext(), "Please fill out all fields!", Toast.LENGTH_LONG).show()
+            // Mengeluarkan Toast "Please fill out all fields!"
+            Toast.makeText(requireContext(), "Please fill out all fields!", Toast.LENGTH_LONG)
+                .show()
         }
     }
 
-    private fun inputCheck(judul: String, akses: String, kategori: String, tanggal: String, reward: String): Boolean {
+    // Mengecek kelengkapan input
+    // Apabila ada yang belum terisi, makan dikembalikan nilai false
+    private fun inputCheck(
+        judul: String,
+        akses: String,
+        kategori: String,
+        tanggal: String,
+        reward: String
+    ): Boolean {
         return !(TextUtils.isEmpty(judul) && TextUtils.isEmpty(akses) && TextUtils.isEmpty(kategori)
                 && TextUtils.isEmpty(tanggal) && TextUtils.isEmpty(reward))
     }

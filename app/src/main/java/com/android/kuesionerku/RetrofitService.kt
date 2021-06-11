@@ -1,6 +1,6 @@
 package com.android.kuesionerku
 
-import com.android.kuesionerku.model.Kuesioner
+import com.android.kuesionerku.Model.Kuesioner
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

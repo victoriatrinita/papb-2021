@@ -3,7 +3,7 @@ package com.android.kuesionerku
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.android.kuesionerku.model.Kuesioner
+import com.android.kuesionerku.Model.Kuesioner
 import com.google.firebase.messaging.FirebaseMessagingService
 import kotlinx.android.synthetic.main.fragment_beranda.*
 
@@ -13,7 +13,7 @@ class BerandaActivity : AppCompatActivity(), IKuesionerView {
     var title = ""
     var message = ""
 
-
+    // Print out token jika diperbarui
     class PushNotificationManager : FirebaseMessagingService() {
         var MT: String? = null
         override fun onNewToken(token: String) {

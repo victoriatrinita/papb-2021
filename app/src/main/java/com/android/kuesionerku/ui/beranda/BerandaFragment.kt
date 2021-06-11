@@ -43,11 +43,6 @@ class BerandaFragment : Fragment() {
             adapter.setData(user)
         })
 
-
-        /*val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })*/
         return root
     }
 

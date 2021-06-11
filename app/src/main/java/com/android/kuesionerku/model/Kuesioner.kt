@@ -1,4 +1,4 @@
-package com.android.kuesionerku.model
+package com.android.kuesionerku.Model
 
 
 import com.google.gson.annotations.SerializedName

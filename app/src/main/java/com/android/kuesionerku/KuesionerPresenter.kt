@@ -1,10 +1,9 @@
 package com.android.kuesionerku
 
 import android.content.Context
-import com.android.kuesionerku.model.Kuesioner
+import com.android.kuesionerku.Model.Kuesioner
 import retrofit2.Call
 import retrofit2.Response
-import javax.security.auth.callback.Callback
 
 class KuesionerPresenter(context: Context) {
     val kuesionerView = context as IKuesionerView

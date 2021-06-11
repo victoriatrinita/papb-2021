@@ -21,6 +21,7 @@ import kotlinx.android.synthetic.main.fragment_list.view.*
 
 class ListFragment : Fragment() {
 
+    // Deklarasi channel notifikasi dan ID notifikasi
     private val CHANNEL_ID = "channel_id_example_01"
     private val notificationId = 101
 
@@ -62,6 +63,9 @@ class ListFragment : Fragment() {
 
     }
 
+    // Membuat channel notifikasi
+    // Channel notifikasi diwajibkan Sejak API level 26
+    // agar notifikasinya muncul karena alasan keamanan dan keleluasaan fitur
     private fun createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = "Notification Title"
@@ -70,6 +74,9 @@ class ListFragment : Fragment() {
             val channel = NotificationChannel(CHANNEL_ID, name, importance).apply {
                 description = descriptionText
             }
+
+            // Mengambil android.app.NotificationManager untuk
+            // memberi tahu pengguna event yang terjadi di background
             val notificationManager
                     : NotificationManager =
                 activity?.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -77,6 +84,7 @@ class ListFragment : Fragment() {
         }
     }
 
+    // Mengirimkan notifikasi
     private fun sendNotification() {
         val builder = NotificationCompat.Builder(requireContext(), CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
