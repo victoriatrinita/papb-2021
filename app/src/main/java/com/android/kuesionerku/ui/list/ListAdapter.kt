@@ -8,11 +8,30 @@ import com.android.kuesionerku.R
 import com.android.kuesionerku.data.User
 import kotlinx.android.synthetic.main.custom_row.view.*
 
-class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+class ListAdapter(
+    private val listener: OnItemClickListener
+): RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     private var userList = emptyList<User>()
 
-    class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView),
+        View.OnClickListener {
+
+        init{
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val judul = itemView.tvberandakuesionerjudul.text
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position, judul)
+            }
+        }
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int, judul: CharSequence)
 
     }
 

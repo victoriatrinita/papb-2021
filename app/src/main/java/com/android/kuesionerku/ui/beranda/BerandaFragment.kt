@@ -10,7 +10,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.android.kuesionerku.R
+import com.android.kuesionerku.data.User
 import android.util.Log
+import android.widget.Toast
 import android.widget.ImageView
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,7 +21,7 @@ import com.android.kuesionerku.ui.list.ListAdapter
 import kotlinx.android.synthetic.main.fragment_beranda.view.*
 
 
-class BerandaFragment : Fragment() {
+class BerandaFragment : Fragment(), ListAdapter.OnItemClickListener {
 
     private lateinit var berandaViewModel: UserViewModel
 
@@ -32,7 +34,7 @@ class BerandaFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_beranda, container, false)
 
         //recyclerview
-        val adapter = ListAdapter()
+        val adapter = ListAdapter(this)
         val recyclerview = root.rvberanda
         recyclerview.adapter = adapter
         recyclerview.layoutManager = LinearLayoutManager(requireContext())
@@ -44,6 +46,10 @@ class BerandaFragment : Fragment() {
         })
 
         return root
+    }
+
+    override fun onItemClick(position: Int, judul: CharSequence) {
+        Toast.makeText(requireActivity(), "Item $judul clicked", Toast.LENGTH_SHORT).show()
     }
 
     override fun onAttach(context: Context) {

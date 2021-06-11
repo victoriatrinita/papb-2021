@@ -8,6 +8,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Toast
 import android.view.ViewGroup
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -19,7 +20,7 @@ import com.android.kuesionerku.R
 import com.android.kuesionerku.data.UserViewModel
 import kotlinx.android.synthetic.main.fragment_list.view.*
 
-class ListFragment : Fragment() {
+class ListFragment : Fragment(), ListAdapter.OnItemClickListener {
 
     // Deklarasi channel notifikasi dan ID notifikasi
     private val CHANNEL_ID = "channel_id_example_01"
@@ -37,12 +38,12 @@ class ListFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_list, container, false)
 
         // Recyclerview
-        val adapter = ListAdapter()
+        val adapter = ListAdapter(this)
         val recyclerView = view.recyclerview
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        // UserViewModel
+        // UserViewModels
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         mUserViewModel.readAllData.observe(viewLifecycleOwner, Observer { user ->
             adapter.setData(user)
@@ -61,6 +62,10 @@ class ListFragment : Fragment() {
 
         return view
 
+    }
+
+    override fun onItemClick(position: Int, judul: CharSequence) {
+        Toast.makeText(requireActivity(), "Item $judul clicked", Toast.LENGTH_SHORT).show()
     }
 
     // Membuat channel notifikasi
