@@ -17,5 +17,5 @@ class BuatKuesionerFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_buat_kuesioner, container, false)
     }
-//    setupActionBarWithNavController(findNavController(R.id.fragment))
+
 }

@@ -9,7 +9,7 @@ import retrofit2.http.GET
 interface RetrofitService {
 
     @GET("kuesioner")
-    fun getAPI() : Call<Kuesioner>
+    fun getAPI(): Call<Kuesioner>
 
     companion object {
         fun create(): RetrofitService {

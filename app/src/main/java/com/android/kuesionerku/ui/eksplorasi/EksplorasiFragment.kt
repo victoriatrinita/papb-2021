@@ -21,16 +21,12 @@ class EksplorasiFragment : Fragment(), ListAdapter.OnItemClickListener {
     private lateinit var eksplorasiViewModel: UserViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_eksplorasi, container, false)
-        /*val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })*/
 
         val adapter = ListAdapter(this)
         val recyclerview = root.rveksplorasi

@@ -10,14 +10,14 @@ import kotlinx.android.synthetic.main.custom_row.view.*
 
 class ListAdapter(
     private val listener: OnItemClickListener
-): RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+) : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 
     private var userList = emptyList<User>()
 
-    inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView),
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
 
-        init{
+        init {
             itemView.setOnClickListener(this)
         }
 
@@ -36,7 +36,9 @@ class ListAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false))
+        return MyViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false)
+        )
     }
 
     override fun getItemCount(): Int {
@@ -52,7 +54,7 @@ class ListAdapter(
         holder.itemView.tvberandakuesionersaldo.text = currentItem.reward
     }
 
-    fun setData(user: List<User>){
+    fun setData(user: List<User>) {
         this.userList = user
         notifyDataSetChanged()
     }

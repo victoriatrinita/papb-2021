@@ -17,17 +17,14 @@ class ProfilFragment : Fragment() {
     private lateinit var profilViewModel: ProfilViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         profilViewModel =
-                ViewModelProvider(this).get(ProfilViewModel::class.java)
+            ViewModelProvider(this).get(ProfilViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_profil, container, false)
-        /*val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })*/
+
         return root
     }
 

@@ -27,8 +27,8 @@ class FirebaseMessaging : FirebaseMessagingService() {
         title = remotemessage.notification!!.title!!
         message = remotemessage.notification!!.body!!
 
-/* if you have any custom data from backend
- data=remotemessage.data.get("yourkeyvalue")*/
+        /* if you have any custom data from backend
+         data=remotemessage.data.get("yourkeyvalue")*/
 
         manager = this.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         sendNotification()

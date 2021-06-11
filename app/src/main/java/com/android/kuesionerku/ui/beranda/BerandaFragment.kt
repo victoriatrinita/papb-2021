@@ -26,9 +26,9 @@ class BerandaFragment : Fragment(), ListAdapter.OnItemClickListener {
     private lateinit var berandaViewModel: UserViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_beranda, container, false)
@@ -83,8 +83,8 @@ class BerandaFragment : Fragment(), ListAdapter.OnItemClickListener {
         builderPromo.setMessage("\uD83C\uDF8A PROMO SPESIAL \uD83C\uDF8A")
         builderPromo.setCancelable(true)
         builderPromo.setPositiveButton(
-                "OK",
-                DialogInterface.OnClickListener { dialog, _ -> dialog.cancel() })
+            "OK",
+            DialogInterface.OnClickListener { dialog, _ -> dialog.cancel() })
         val alertPromo: AlertDialog = builderPromo.create()
         alertPromo.show()
     }
@@ -92,8 +92,6 @@ class BerandaFragment : Fragment(), ListAdapter.OnItemClickListener {
     override fun onPause() {
         super.onPause()
         Log.i("BerandaFragment", "onPause invoked")
-
-
     }
 
     override fun onStop() {
